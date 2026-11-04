@@ -1,0 +1,45 @@
+# Data (never committed)
+data/
+*.parquet
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+kaggle.json
+
+# IDE
+.vscode/
+.idea/
+
+# Notebooks
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+
+# Models over 5MB
+*.pkl
+*.joblib
+!app_data/*.pkl
+
+# Temp
+*.tmp
+*.bak

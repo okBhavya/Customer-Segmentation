@@ -1,0 +1,124 @@
+# Customer Segmentation, Next-Best-Action & Banner Ranking Engine
+# All configurable parameters in one place for reproducibility.
+
+paths:
+  raw_csv: data/raw/2019-Oct.csv
+  parquet: data/processed/events.parquet
+  features_dir: data/processed/features
+  models_dir: data/processed/models
+  reports_dir: reports
+  figures_dir: reports/figures
+  app_data_dir: app_data
+  duckdb_temp: data/processed/duckdb_tmp
+
+seed: 42
+
+# DuckDB settings
+duckdb:
+  memory_limit: "8GB"
+  threads: 4
+
+# Snapshot dates (UTC): features use [start, end), labels use [label_start, label_end)
+# Lookback: 10 days, Horizon: 7 days, disjoint label windows
+snapshots:
+  train:
+    feature_start: "2019-10-01"
+    feature_end: "2019-10-11"
+    label_start: "2019-10-11"
+    label_end: "2019-10-18"
+  validation:
+    feature_start: "2019-10-08"
+    feature_end: "2019-10-18"
+    label_start: "2019-10-18"
+    label_end: "2019-10-25"
+  test:
+    feature_start: "2019-10-15"
+    feature_end: "2019-10-25"
+    label_start: "2019-10-25"
+    label_end: "2019-11-01"
+
+# Feature engineering
+features:
+  min_events_for_churn_label: 2  # min active days in lookback to be churn-eligible
+
+# Segmentation
+segmentation:
+  rfm_bins: 4
+  k_range: [4, 5, 6, 7]
+  silhouette_sample: 10000
+  stability_seeds: [42, 123, 456, 789, 1024]
+  stability_bootstraps: 10
+
+# Propensity models
+propensity:
+  lgbm:
+    n_estimators: 1000
+    learning_rate: 0.05
+    max_depth: 6
+    num_leaves: 31
+    min_child_samples: 50
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 0.1
+    reg_lambda: 1.0
+    early_stopping_rounds: 50
+    class_weight: "balanced"
+  tuning_trials: 30
+  bootstrap_ci_n: 1000
+  bootstrap_ci_alpha: 0.05
+
+# Banner ranking
+ranking:
+  negative_sample_ratio: 5
+  relevance_grades:
+    purchase: 3
+    cart: 2
+    view: 1
+  min_unit_events: 50  # min events to be a banner unit
+  lgbm_ranker:
+    n_estimators: 500
+    learning_rate: 0.05
+    max_depth: 6
+    num_leaves: 31
+    min_child_samples: 20
+    subsample: 0.8
+    colsample_bytree: 0.8
+  user_sample_size: 50000
+  eval_user_sample: 10000
+
+# Next-best-action
+nba:
+  actions:
+    - name: "no_action"
+      assumed_uplift: 0.0
+      cost: 0.0
+    - name: "cart_reminder"
+      assumed_uplift: 0.05
+      cost: 0.10
+    - name: "category_cross_sell"
+      assumed_uplift: 0.03
+      cost: 0.50
+    - name: "price_led_nudge"
+      assumed_uplift: 0.04
+      cost: 1.00
+    - name: "loyalty_early_access"
+      assumed_uplift: 0.02
+      cost: 0.25
+    - name: "win_back_message"
+      assumed_uplift: 0.06
+      cost: 0.75
+  contact_frequency_cap: 3  # max actions per user per week
+  min_expected_value: 0.50  # min EV to recommend action over no-action
+
+# Experiment design
+experiment:
+  alpha: 0.05
+  power: 0.80
+  mde_range: [0.005, 0.01, 0.015, 0.02, 0.025, 0.03]
+  min_sample_per_arm: 1000
+  holdout_fraction: 0.10
+
+# App
+app:
+  sample_users: 20000
+  max_app_data_mb: 15
