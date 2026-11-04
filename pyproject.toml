@@ -50,7 +50,7 @@ ignore = ["E501"]
 testpaths = ["tests"]
 addopts = "-v --tb=short"
 filterwarnings = [
-    "ignore:The argument 'eval_set' is deprecated:UserWarning",
+    "ignore:.*eval_set.*",
 ]
 
 [tool.coverage.run]

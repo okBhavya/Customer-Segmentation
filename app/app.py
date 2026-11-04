@@ -150,7 +150,7 @@ def render_funnel():
     opps = funnel.get("opportunities", [])
     if opps:
         df_opps = pd.DataFrame(opps)
-        st.dataframe(df_opps, use_container_width=True)
+        st.dataframe(df_opps, width="stretch")
         st.caption(funnel.get("opportunity_assumptions", ""))
 
 
@@ -163,13 +163,13 @@ def render_segments():
     if k_sel:
         st.subheader("K-Means Cluster Optimization (k Selection)")
         k_df = pd.DataFrame.from_dict(k_sel, orient="index")
-        st.dataframe(k_df, use_container_width=True)
+        st.dataframe(k_df, width="stretch")
 
     st.subheader("Segment Profiles (Test Snapshot)")
     test_profs = profiles.get("test_segment_kmeans", {}) if profiles else {}
     if test_profs:
         prof_df = pd.DataFrame.from_dict(test_profs, orient="index")
-        st.dataframe(prof_df, use_container_width=True)
+        st.dataframe(prof_df, width="stretch")
 
     st.subheader("Segment Migration")
     mig = metrics.get("migration", {}) if metrics else {}
@@ -200,12 +200,12 @@ def render_propensity():
                 r = {"Model": m_name}
                 r.update(purch[m_name])
                 res_rows.append(r)
-        st.dataframe(pd.DataFrame(res_rows), use_container_width=True)
+        st.dataframe(pd.DataFrame(res_rows), width="stretch")
 
         st.subheader("Decile Lift Analysis")
         dec = purch.get("decile_table", [])
         if dec:
-            st.dataframe(pd.DataFrame(dec), use_container_width=True)
+            st.dataframe(pd.DataFrame(dec), width="stretch")
 
     with tab2:
         st.subheader("Churn Model Evaluation (Test Snapshot)")
@@ -221,7 +221,7 @@ def render_propensity():
                 r = {"Model": m_name}
                 r.update(churn[m_name])
                 res_rows.append(r)
-        st.dataframe(pd.DataFrame(res_rows), use_container_width=True)
+        st.dataframe(pd.DataFrame(res_rows), width="stretch")
 
 
 def render_nba():
@@ -249,7 +249,7 @@ def render_nba():
     if nba:
         sims = nba.get("simulations", {})
         sim_df = pd.DataFrame.from_dict(sims, orient="index")
-        st.dataframe(sim_df, use_container_width=True)
+        st.dataframe(sim_df, width="stretch")
         st.info(nba.get("disclaimer", ""))
 
 
@@ -267,7 +267,7 @@ def render_ranking():
                 r = {"Model": m}
                 r.update(rank_rep[m])
                 r_rows.append(r)
-        st.dataframe(pd.DataFrame(r_rows), use_container_width=True)
+        st.dataframe(pd.DataFrame(r_rows), width="stretch")
 
         st.subheader("Counterfactual Evaluation (SNIPS CTR Proxy)")
         st.json(rank_rep.get("ips_ctr_proxy", {}))
@@ -279,7 +279,7 @@ def render_ranking():
         u_rank = rankings[rankings["user_id"] == sel_u].sort_values("rank")
         st.dataframe(
             u_rank[["rank", "category_code", "score", "actual_relevance"]],
-            use_container_width=True,
+            width="stretch",
         )
 
 

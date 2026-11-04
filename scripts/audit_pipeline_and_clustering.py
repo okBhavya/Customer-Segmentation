@@ -1,12 +1,11 @@
 """Comprehensive QA audit script for Data Pipeline, Leakage, and Clustering Validity."""
 
-import json
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
-from sklearn.metrics import adjusted_rand_score, davies_bouldin_score, silhouette_score
+from sklearn.metrics import adjusted_rand_score
 from sklearn.preprocessing import StandardScaler
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,7 +32,7 @@ def main():
     tr = pd.read_parquet(FEATURES_DIR / "train_features.parquet")
     val = pd.read_parquet(FEATURES_DIR / "validation_features.parquet")
     te = pd.read_parquet(FEATURES_DIR / "test_features.parquet")
-    print(f"Snapshot Row Counts:")
+    print("Snapshot Row Counts:")
     print(f"  Train:      {len(tr):,} users")
     print(f"  Validation: {len(val):,} users")
     print(f"  Test:       {len(te):,} users\n")

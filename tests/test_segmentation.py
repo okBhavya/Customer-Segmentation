@@ -75,6 +75,7 @@ def test_predict_segment_roundtrip_and_edge_cases(tmp_path):
     """Test model save/load, prediction match, and defensive handling of bad inputs."""
     import joblib
     from sklearn.preprocessing import StandardScaler
+
     from custintel.segment import CLUSTER_FEATURES, predict_segment
 
     rng = np.random.RandomState(42)
