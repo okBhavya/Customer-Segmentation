@@ -34,7 +34,9 @@ desktop.ini
 .ruff_cache/
 .mypy_cache/
 .pytest_cache/
+.coverage
 htmlcov/
+reports/smoke_reports/
 
 # Models over 5MB
 *.pkl

@@ -49,6 +49,22 @@ def main():
     if args.smoke:
         cfg["_smoke"] = True
         cfg["paths"]["raw_csv"] = str(root / "tests" / "fixtures" / "smoke_events.csv")
+        cfg["paths"]["parquet"] = "data/processed/smoke_events.parquet"
+        cfg["paths"]["features_dir"] = "data/processed/smoke_features"
+        cfg["paths"]["models_dir"] = "data/processed/smoke_models"
+        cfg["paths"]["reports_dir"] = "reports/smoke_reports"
+        cfg["paths"]["figures_dir"] = "reports/smoke_reports/figures"
+        cfg["paths"]["app_data_dir"] = "reports/smoke_reports/app_data"
+        cfg["duckdb"]["memory_limit"] = "1GB"
+        cfg["duckdb"]["threads"] = 2
+        cfg["segmentation"]["silhouette_sample"] = 50
+        cfg["segmentation"]["stability_bootstraps"] = 2
+        cfg["propensity"]["tuning_trials"] = 2
+        cfg["propensity"]["bootstrap_ci_n"] = 20
+        cfg["ranking"]["min_unit_events"] = 1
+        cfg["ranking"]["user_sample_size"] = 50
+        cfg["ranking"]["eval_user_sample"] = 25
+        cfg["ranking"]["bootstrap_ci_n"] = 20
 
     runtimes = {}
 

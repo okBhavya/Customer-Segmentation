@@ -12,7 +12,7 @@ def run_app_data(cfg: dict, root: Path):
     features_dir = root / cfg["paths"]["features_dir"]
     reports_dir = root / cfg["paths"]["reports_dir"]
     figures_dir = root / cfg["paths"]["figures_dir"]
-    app_data_dir = root / "app_data"
+    app_data_dir = root / cfg["paths"].get("app_data_dir", "app_data")
     app_data_dir.mkdir(parents=True, exist_ok=True)
 
     print("  Preparing compact app_data/...")

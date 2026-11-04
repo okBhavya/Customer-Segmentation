@@ -1,3 +1,12 @@
 {
-  "app-data": 2.0
+  "ingest": 297.5,
+  "features": 165.0,
+  "funnel": 120.0,
+  "segment": 171.6,
+  "propensity": 365.4,
+  "rank": 242.2,
+  "nba": 25.6,
+  "experiment": 5.2,
+  "app-data": 2.3,
+  "total_pipeline_seconds": 1394.8
 }

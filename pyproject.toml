@@ -48,4 +48,8 @@ ignore = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src/custintel"]
+omit = ["src/custintel/__main__.py"]
 addopts = "-v --tb=short"
