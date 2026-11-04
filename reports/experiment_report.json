@@ -1,0 +1,118 @@
+{
+  "baseline_metrics": {
+    "purchase_conversion_rate": 0.0347,
+    "revenue_per_user_mean": 19.75,
+    "revenue_per_user_std": 269.03,
+    "revenue_per_user_var": 72375.77
+  },
+  "sample_size_table": [
+    {
+      "relative_mde": 0.01,
+      "absolute_mde": 0.00035,
+      "target_purchase_rate": 0.03508,
+      "sample_size_per_arm": 4384219,
+      "total_sample_size": 8768438
+    },
+    {
+      "relative_mde": 0.02,
+      "absolute_mde": 0.00069,
+      "target_purchase_rate": 0.03542,
+      "sample_size_per_arm": 1101290,
+      "total_sample_size": 2202580
+    },
+    {
+      "relative_mde": 0.03,
+      "absolute_mde": 0.00104,
+      "target_purchase_rate": 0.03577,
+      "sample_size_per_arm": 491783,
+      "total_sample_size": 983566
+    },
+    {
+      "relative_mde": 0.04,
+      "absolute_mde": 0.00139,
+      "target_purchase_rate": 0.03612,
+      "sample_size_per_arm": 277929,
+      "total_sample_size": 555858
+    },
+    {
+      "relative_mde": 0.05,
+      "absolute_mde": 0.00174,
+      "target_purchase_rate": 0.03646,
+      "sample_size_per_arm": 178706,
+      "total_sample_size": 357412
+    },
+    {
+      "relative_mde": 0.1,
+      "absolute_mde": 0.00347,
+      "target_purchase_rate": 0.0382,
+      "sample_size_per_arm": 45707,
+      "total_sample_size": 91414
+    }
+  ],
+  "cuped": {
+    "pre_metric": "total_spend_lookback",
+    "post_metric": "label_revenue_horizon",
+    "correlation": 0.4136,
+    "variance_original": 72375.72,
+    "variance_cuped": 59994.76,
+    "variance_reduction_pct": 17.11,
+    "effective_sample_size_multiplier": 1.21
+  },
+  "srm_validation": {
+    "test_pass": {
+      "observed": [
+        10000,
+        10050
+      ],
+      "chi2": 0.125,
+      "p_value": 0.724
+    },
+    "test_fail": {
+      "observed": [
+        10000,
+        10600
+      ],
+      "chi2": 17.476,
+      "p_value": 2.9e-05
+    }
+  },
+  "simulation_validation": {
+    "n_simulations": 1000,
+    "target_alpha": 0.05,
+    "empirical_type_1_error": 0.058,
+    "target_power": 0.8,
+    "empirical_power_5pct_lift": 0.803
+  },
+  "multiple_testing_correction": [
+    {
+      "segment": "Champions",
+      "raw_p_value": 0.008,
+      "holm_adjusted_p": 0.04,
+      "significant_at_05": true
+    },
+    {
+      "segment": "Loyal",
+      "raw_p_value": 0.021,
+      "holm_adjusted_p": 0.084,
+      "significant_at_05": false
+    },
+    {
+      "segment": "At-Risk",
+      "raw_p_value": 0.045,
+      "holm_adjusted_p": 0.135,
+      "significant_at_05": false
+    },
+    {
+      "segment": "Window Shoppers",
+      "raw_p_value": 0.12,
+      "holm_adjusted_p": 0.24,
+      "significant_at_05": false
+    },
+    {
+      "segment": "Hibernating",
+      "raw_p_value": 0.35,
+      "holm_adjusted_p": 0.35,
+      "significant_at_05": false
+    }
+  ]
+}
