@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 
+import joblib
 import matplotlib
 
 matplotlib.use("Agg")
@@ -173,6 +174,14 @@ def run_segment(cfg: dict, root: Path):
         df.to_parquet(out_path, index=False)
         print(f"  Saved {out_path}")
 
+    models_dir = root / cfg["paths"].get("models_dir", "data/processed/models")
+    models_dir.mkdir(parents=True, exist_ok=True)
+    joblib.dump(
+        {"scaler": scaler, "kmeans": km_final, "features": valid_cols, "k": best_k},
+        models_dir / "segmentation_model.joblib",
+    )
+    print(f"  Saved {models_dir / 'segmentation_model.joblib'}")
+
     with open(reports_dir / "segment_metrics.json", "w") as f:
         json.dump(all_metrics, f, indent=2, default=str)
 
@@ -184,6 +193,41 @@ def run_segment(cfg: dict, root: Path):
     _plot_segment_outcomes(snapshots["test"], figures_dir)
 
     print("  Segmentation complete.")
+
+
+def predict_segment(df: pd.DataFrame, model_artifact: dict | Path) -> np.ndarray:
+    """Predict customer segment for new input data with defensive validation.
+
+    Args:
+        df: DataFrame containing the clustering feature columns.
+        model_artifact: Either a dict containing 'scaler', 'kmeans', 'features'
+                        or a Path to the saved joblib file.
+
+    Returns:
+        Numpy array of cluster assignments (0 to k-1).
+    """
+    if isinstance(model_artifact, (str, Path)):
+        model_artifact = joblib.load(model_artifact)
+
+    features = model_artifact["features"]
+    scaler = model_artifact["scaler"]
+    km = model_artifact["kmeans"]
+
+    # Defensive input validation
+    missing_cols = [c for c in features if c not in df.columns]
+    if missing_cols:
+        raise ValueError(f"Missing required feature columns: {missing_cols}")
+
+    if len(df) == 0:
+        return np.array([], dtype=int)
+
+    X = df[features].copy()
+    # Handle nulls gracefully by filling with 0
+    X = X.fillna(0.0)
+    # Handle negative values defensively by clipping to 0
+    X_arr = np.log1p(np.maximum(X.values, 0.0))
+    X_scaled = scaler.transform(X_arr)
+    return km.predict(X_scaled)
 
 
 def _rfm_segment(df: pd.DataFrame, n_bins: int) -> pd.DataFrame:

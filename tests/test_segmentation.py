@@ -69,3 +69,54 @@ def test_segment_variance_explained():
     ss_total = ((df["outcome"] - df["outcome"].mean()) ** 2).sum()
     r2 = ss_between / ss_total
     assert 0.90 <= r2 <= 1.0
+
+
+def test_predict_segment_roundtrip_and_edge_cases(tmp_path):
+    """Test model save/load, prediction match, and defensive handling of bad inputs."""
+    import joblib
+    from sklearn.preprocessing import StandardScaler
+    from custintel.segment import CLUSTER_FEATURES, predict_segment
+
+    rng = np.random.RandomState(42)
+    n = 100
+    features = CLUSTER_FEATURES
+
+    # Mock features data
+    data = {f: np.maximum(0.0, rng.exponential(scale=10.0, size=n)) for f in features}
+    df = pd.DataFrame(data)
+
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(np.log1p(df.values))
+    km = KMeans(n_clusters=4, random_state=42, n_init=10).fit(X_scaled)
+    expected_labels = km.labels_
+
+    model_path = tmp_path / "model.joblib"
+    joblib.dump({"scaler": scaler, "kmeans": km, "features": features, "k": 4}, model_path)
+
+    # 1. Roundtrip load and predict known customers
+    preds = predict_segment(df, model_path)
+    np.testing.assert_array_equal(preds, expected_labels)
+
+    # 2. Defensive check: empty input
+    empty_df = pd.DataFrame(columns=features)
+    assert len(predict_segment(empty_df, model_path)) == 0
+
+    # 3. Defensive check: NaNs in input
+    df_nan = df.copy()
+    df_nan.iloc[0, 0] = np.nan
+    preds_nan = predict_segment(df_nan, model_path)
+    assert len(preds_nan) == n
+    assert not np.isnan(preds_nan).any()
+
+    # 4. Defensive check: negative values in input (clipped gracefully)
+    df_neg = df.copy()
+    df_neg.iloc[0, 0] = -999.0
+    preds_neg = predict_segment(df_neg, model_path)
+    assert len(preds_neg) == n
+
+    # 5. Defensive check: missing column raises ValueError
+    df_missing = df.drop(columns=[features[0]])
+    import pytest
+
+    with pytest.raises(ValueError, match="Missing required feature columns"):
+        predict_segment(df_missing, model_path)

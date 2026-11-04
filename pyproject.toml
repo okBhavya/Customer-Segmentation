@@ -48,8 +48,11 @@ ignore = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "-v --tb=short"
+filterwarnings = [
+    "ignore:The argument 'eval_set' is deprecated:UserWarning",
+]
 
 [tool.coverage.run]
 source = ["src/custintel"]
 omit = ["src/custintel/__main__.py"]
-addopts = "-v --tb=short"
