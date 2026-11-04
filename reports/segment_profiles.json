@@ -1,0 +1,802 @@
+{
+  "train_rfm_segment": {
+    "at_risk": {
+      "size": 3,
+      "pct_of_users": 0.0,
+      "avg_events": 473.7,
+      "avg_spend": 51.48,
+      "avg_active_days": 3.67,
+      "purchase_rate": 0.0,
+      "churn_rate": 0.6667,
+      "avg_revenue": 0.0
+    },
+    "champions": {
+      "size": 1,
+      "pct_of_users": 0.0,
+      "avg_events": 901.0,
+      "avg_spend": 79216.23,
+      "avg_active_days": 6.0,
+      "purchase_rate": 1.0,
+      "churn_rate": 0.0,
+      "avg_revenue": 2336.55
+    },
+    "hibernating": {
+      "size": 1,
+      "pct_of_users": 0.0,
+      "avg_events": 459.0,
+      "avg_spend": 370.2,
+      "avg_active_days": 2.0,
+      "purchase_rate": 0.0,
+      "churn_rate": 1.0,
+      "avg_revenue": 0.0
+    },
+    "loyal": {
+      "size": 75,
+      "pct_of_users": 0.01,
+      "avg_events": 585.0,
+      "avg_spend": 1949.05,
+      "avg_active_days": 7.35,
+      "purchase_rate": 0.4133,
+      "purchase_rate_ci": [
+        0.3019,
+        0.5248
+      ],
+      "churn_rate": 0.1622,
+      "avg_revenue": 416.07
+    },
+    "need_attention": {
+      "size": 38582,
+      "pct_of_users": 2.96,
+      "avg_events": 16.2,
+      "avg_spend": 439.19,
+      "avg_active_days": 1.48,
+      "purchase_rate": 0.1175,
+      "purchase_rate_ci": [
+        0.1143,
+        0.1207
+      ],
+      "churn_rate": 0.6372,
+      "avg_revenue": 77.57
+    },
+    "new_or_promising": {
+      "size": 793460,
+      "pct_of_users": 60.92,
+      "avg_events": 11.9,
+      "avg_spend": 64.2,
+      "avg_active_days": 1.73,
+      "purchase_rate": 0.0576,
+      "purchase_rate_ci": [
+        0.0571,
+        0.0581
+      ],
+      "churn_rate": 0.4411,
+      "avg_revenue": 36.86
+    },
+    "window_shoppers": {
+      "size": 470241,
+      "pct_of_users": 36.11,
+      "avg_events": 5.6,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.15,
+      "purchase_rate": 0.0194,
+      "purchase_rate_ci": [
+        0.019,
+        0.0198
+      ],
+      "churn_rate": 0.6207,
+      "avg_revenue": 8.39
+    }
+  },
+  "train_segment_kmeans": {
+    "0": {
+      "size": 282362,
+      "pct_of_users": 21.68,
+      "avg_events": 2.5,
+      "avg_spend": 0.03,
+      "avg_active_days": 1.06,
+      "purchase_rate": 0.0161,
+      "purchase_rate_ci": [
+        0.0157,
+        0.0166
+      ],
+      "churn_rate": 0.6944,
+      "avg_revenue": 7.5
+    },
+    "1": {
+      "size": 295364,
+      "pct_of_users": 22.68,
+      "avg_events": 12.7,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.63,
+      "purchase_rate": 0.0406,
+      "purchase_rate_ci": [
+        0.0399,
+        0.0413
+      ],
+      "churn_rate": 0.5157,
+      "avg_revenue": 16.33
+    },
+    "2": {
+      "size": 60663,
+      "pct_of_users": 4.66,
+      "avg_events": 25.4,
+      "avg_spend": 764.37,
+      "avg_active_days": 2.31,
+      "purchase_rate": 0.2116,
+      "purchase_rate_ci": [
+        0.2084,
+        0.2149
+      ],
+      "churn_rate": 0.4593,
+      "avg_revenue": 241.75
+    },
+    "3": {
+      "size": 56049,
+      "pct_of_users": 4.3,
+      "avg_events": 17.2,
+      "avg_spend": 366.28,
+      "avg_active_days": 1.91,
+      "purchase_rate": 0.1628,
+      "purchase_rate_ci": [
+        0.1598,
+        0.1659
+      ],
+      "churn_rate": 0.4755,
+      "avg_revenue": 104.4
+    },
+    "4": {
+      "size": 335236,
+      "pct_of_users": 25.74,
+      "avg_events": 2.4,
+      "avg_spend": 0.01,
+      "avg_active_days": 1.16,
+      "purchase_rate": 0.0228,
+      "purchase_rate_ci": [
+        0.0223,
+        0.0233
+      ],
+      "churn_rate": 0.5901,
+      "avg_revenue": 10.52
+    },
+    "5": {
+      "size": 101218,
+      "pct_of_users": 7.77,
+      "avg_events": 44.4,
+      "avg_spend": 11.78,
+      "avg_active_days": 3.58,
+      "purchase_rate": 0.0999,
+      "purchase_rate_ci": [
+        0.098,
+        0.1017
+      ],
+      "churn_rate": 0.3015,
+      "avg_revenue": 39.37
+    },
+    "6": {
+      "size": 171471,
+      "pct_of_users": 13.17,
+      "avg_events": 3.2,
+      "avg_spend": 0.07,
+      "avg_active_days": 1.13,
+      "purchase_rate": 0.018,
+      "purchase_rate_ci": [
+        0.0174,
+        0.0187
+      ],
+      "churn_rate": 0.6369,
+      "avg_revenue": 7.3
+    }
+  },
+  "train_segment_gmm": {
+    "0": {
+      "size": 218567,
+      "pct_of_users": 16.78,
+      "avg_events": 7.0,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.33,
+      "purchase_rate": 0.022,
+      "purchase_rate_ci": [
+        0.0214,
+        0.0226
+      ],
+      "churn_rate": 0.5677,
+      "avg_revenue": 8.72
+    },
+    "1": {
+      "size": 76426,
+      "pct_of_users": 5.87,
+      "avg_events": 26.9,
+      "avg_spend": 281.86,
+      "avg_active_days": 2.39,
+      "purchase_rate": 0.1583,
+      "purchase_rate_ci": [
+        0.1557,
+        0.1609
+      ],
+      "churn_rate": 0.4026,
+      "avg_revenue": 93.81
+    },
+    "2": {
+      "size": 79577,
+      "pct_of_users": 6.11,
+      "avg_events": 24.8,
+      "avg_spend": 0.0,
+      "avg_active_days": 3.27,
+      "purchase_rate": 0.066,
+      "purchase_rate_ci": [
+        0.0642,
+        0.0677
+      ],
+      "churn_rate": 0.4011,
+      "avg_revenue": 26.42
+    },
+    "3": {
+      "size": 90058,
+      "pct_of_users": 6.91,
+      "avg_events": 16.9,
+      "avg_spend": 0.0,
+      "avg_active_days": 2.55,
+      "purchase_rate": 0.0583,
+      "purchase_rate_ci": [
+        0.0568,
+        0.0598
+      ],
+      "churn_rate": 0.4577,
+      "avg_revenue": 24.72
+    },
+    "4": {
+      "size": 31159,
+      "pct_of_users": 2.39,
+      "avg_events": 42.8,
+      "avg_spend": 977.61,
+      "avg_active_days": 3.57,
+      "purchase_rate": 0.2835,
+      "purchase_rate_ci": [
+        0.2785,
+        0.2885
+      ],
+      "churn_rate": 0.3692,
+      "avg_revenue": 367.14
+    },
+    "5": {
+      "size": 750655,
+      "pct_of_users": 57.64,
+      "avg_events": 5.0,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.08,
+      "purchase_rate": 0.0225,
+      "purchase_rate_ci": [
+        0.0221,
+        0.0228
+      ],
+      "churn_rate": 0.5832,
+      "avg_revenue": 9.34
+    },
+    "6": {
+      "size": 55921,
+      "pct_of_users": 4.29,
+      "avg_events": 11.9,
+      "avg_spend": 288.1,
+      "avg_active_days": 1.43,
+      "purchase_rate": 0.1118,
+      "purchase_rate_ci": [
+        0.1092,
+        0.1144
+      ],
+      "churn_rate": 0.5925,
+      "avg_revenue": 78.04
+    }
+  },
+  "validation_rfm_segment": {
+    "loyal": {
+      "size": 104,
+      "pct_of_users": 0.01,
+      "avg_events": 611.3,
+      "avg_spend": 3949.53,
+      "avg_active_days": 7.74,
+      "purchase_rate": 0.4519,
+      "purchase_rate_ci": [
+        0.3563,
+        0.5476
+      ],
+      "churn_rate": 0.0769,
+      "avg_revenue": 726.92
+    },
+    "need_attention": {
+      "size": 39229,
+      "pct_of_users": 2.81,
+      "avg_events": 15.9,
+      "avg_spend": 399.36,
+      "avg_active_days": 1.49,
+      "purchase_rate": 0.092,
+      "purchase_rate_ci": [
+        0.0891,
+        0.0948
+      ],
+      "churn_rate": 0.6651,
+      "avg_revenue": 51.26
+    },
+    "new_or_promising": {
+      "size": 835403,
+      "pct_of_users": 59.79,
+      "avg_events": 13.2,
+      "avg_spend": 77.24,
+      "avg_active_days": 1.82,
+      "purchase_rate": 0.0533,
+      "purchase_rate_ci": [
+        0.0529,
+        0.0538
+      ],
+      "churn_rate": 0.4668,
+      "avg_revenue": 33.1
+    },
+    "window_shoppers": {
+      "size": 522539,
+      "pct_of_users": 37.4,
+      "avg_events": 5.4,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.15,
+      "purchase_rate": 0.0152,
+      "purchase_rate_ci": [
+        0.0148,
+        0.0155
+      ],
+      "churn_rate": 0.6558,
+      "avg_revenue": 6.22
+    }
+  },
+  "validation_segment_kmeans": {
+    "0": {
+      "size": 327832,
+      "pct_of_users": 23.46,
+      "avg_events": 2.4,
+      "avg_spend": 0.03,
+      "avg_active_days": 1.06,
+      "purchase_rate": 0.0129,
+      "purchase_rate_ci": [
+        0.0125,
+        0.0133
+      ],
+      "churn_rate": 0.7198,
+      "avg_revenue": 5.89
+    },
+    "1": {
+      "size": 316314,
+      "pct_of_users": 22.64,
+      "avg_events": 12.6,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.65,
+      "purchase_rate": 0.0333,
+      "purchase_rate_ci": [
+        0.0327,
+        0.0339
+      ],
+      "churn_rate": 0.5464,
+      "avg_revenue": 13.02
+    },
+    "2": {
+      "size": 74541,
+      "pct_of_users": 5.33,
+      "avg_events": 26.9,
+      "avg_spend": 755.11,
+      "avg_active_days": 2.4,
+      "purchase_rate": 0.2012,
+      "purchase_rate_ci": [
+        0.1983,
+        0.204
+      ],
+      "churn_rate": 0.4679,
+      "avg_revenue": 197.19
+    },
+    "3": {
+      "size": 60863,
+      "pct_of_users": 4.36,
+      "avg_events": 17.4,
+      "avg_spend": 373.01,
+      "avg_active_days": 1.99,
+      "purchase_rate": 0.1305,
+      "purchase_rate_ci": [
+        0.1278,
+        0.1331
+      ],
+      "churn_rate": 0.5183,
+      "avg_revenue": 76.97
+    },
+    "4": {
+      "size": 321772,
+      "pct_of_users": 23.03,
+      "avg_events": 2.4,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.17,
+      "purchase_rate": 0.0207,
+      "purchase_rate_ci": [
+        0.0202,
+        0.0212
+      ],
+      "churn_rate": 0.6054,
+      "avg_revenue": 9.65
+    },
+    "5": {
+      "size": 120936,
+      "pct_of_users": 8.66,
+      "avg_events": 44.0,
+      "avg_spend": 13.15,
+      "avg_active_days": 3.6,
+      "purchase_rate": 0.0744,
+      "purchase_rate_ci": [
+        0.0729,
+        0.0759
+      ],
+      "churn_rate": 0.3408,
+      "avg_revenue": 27.5
+    },
+    "6": {
+      "size": 175017,
+      "pct_of_users": 12.53,
+      "avg_events": 3.2,
+      "avg_spend": 0.09,
+      "avg_active_days": 1.15,
+      "purchase_rate": 0.0158,
+      "purchase_rate_ci": [
+        0.0153,
+        0.0164
+      ],
+      "churn_rate": 0.6576,
+      "avg_revenue": 6.42
+    }
+  },
+  "validation_segment_gmm": {
+    "0": {
+      "size": 237469,
+      "pct_of_users": 17.0,
+      "avg_events": 7.5,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.39,
+      "purchase_rate": 0.019,
+      "purchase_rate_ci": [
+        0.0185,
+        0.0196
+      ],
+      "churn_rate": 0.5922,
+      "avg_revenue": 7.17
+    },
+    "1": {
+      "size": 87462,
+      "pct_of_users": 6.26,
+      "avg_events": 28.3,
+      "avg_spend": 274.12,
+      "avg_active_days": 2.51,
+      "purchase_rate": 0.1254,
+      "purchase_rate_ci": [
+        0.1232,
+        0.1276
+      ],
+      "churn_rate": 0.4345,
+      "avg_revenue": 67.33
+    },
+    "2": {
+      "size": 86471,
+      "pct_of_users": 6.19,
+      "avg_events": 25.7,
+      "avg_spend": 0.0,
+      "avg_active_days": 3.35,
+      "purchase_rate": 0.049,
+      "purchase_rate_ci": [
+        0.0476,
+        0.0504
+      ],
+      "churn_rate": 0.4155,
+      "avg_revenue": 20.17
+    },
+    "3": {
+      "size": 95983,
+      "pct_of_users": 6.87,
+      "avg_events": 16.4,
+      "avg_spend": 0.0,
+      "avg_active_days": 2.55,
+      "purchase_rate": 0.0444,
+      "purchase_rate_ci": [
+        0.0431,
+        0.0457
+      ],
+      "churn_rate": 0.4929,
+      "avg_revenue": 16.93
+    },
+    "4": {
+      "size": 44864,
+      "pct_of_users": 3.21,
+      "avg_events": 43.1,
+      "avg_spend": 890.06,
+      "avg_active_days": 3.56,
+      "purchase_rate": 0.2492,
+      "purchase_rate_ci": [
+        0.2452,
+        0.2532
+      ],
+      "churn_rate": 0.4006,
+      "avg_revenue": 269.85
+    },
+    "5": {
+      "size": 780915,
+      "pct_of_users": 55.89,
+      "avg_events": 4.8,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.09,
+      "purchase_rate": 0.0184,
+      "purchase_rate_ci": [
+        0.0181,
+        0.0187
+      ],
+      "churn_rate": 0.6155,
+      "avg_revenue": 7.61
+    },
+    "6": {
+      "size": 64111,
+      "pct_of_users": 4.59,
+      "avg_events": 11.4,
+      "avg_spend": 260.45,
+      "avg_active_days": 1.38,
+      "purchase_rate": 0.1025,
+      "purchase_rate_ci": [
+        0.1002,
+        0.1049
+      ],
+      "churn_rate": 0.6132,
+      "avg_revenue": 62.02
+    }
+  },
+  "test_rfm_segment": {
+    "loyal": {
+      "size": 7,
+      "pct_of_users": 0.0,
+      "avg_events": 1035.3,
+      "avg_spend": 19424.15,
+      "avg_active_days": 8.43,
+      "purchase_rate": 0.5714,
+      "churn_rate": 0.0,
+      "avg_revenue": 1305.47
+    },
+    "need_attention": {
+      "size": 48278,
+      "pct_of_users": 3.31,
+      "avg_events": 15.8,
+      "avg_spend": 442.01,
+      "avg_active_days": 1.5,
+      "purchase_rate": 0.0915,
+      "purchase_rate_ci": [
+        0.089,
+        0.0941
+      ],
+      "churn_rate": 0.6851,
+      "avg_revenue": 57.37
+    },
+    "new_or_promising": {
+      "size": 864524,
+      "pct_of_users": 59.31,
+      "avg_events": 12.2,
+      "avg_spend": 69.45,
+      "avg_active_days": 1.75,
+      "purchase_rate": 0.044,
+      "purchase_rate_ci": [
+        0.0435,
+        0.0444
+      ],
+      "churn_rate": 0.4924,
+      "avg_revenue": 26.26
+    },
+    "window_shoppers": {
+      "size": 544863,
+      "pct_of_users": 37.38,
+      "avg_events": 5.7,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.17,
+      "purchase_rate": 0.015,
+      "purchase_rate_ci": [
+        0.0147,
+        0.0153
+      ],
+      "churn_rate": 0.6553,
+      "avg_revenue": 6.05
+    }
+  },
+  "test_segment_kmeans": {
+    "0": {
+      "size": 328646,
+      "pct_of_users": 22.55,
+      "avg_events": 2.4,
+      "avg_spend": 0.02,
+      "avg_active_days": 1.06,
+      "purchase_rate": 0.0128,
+      "purchase_rate_ci": [
+        0.0125,
+        0.0132
+      ],
+      "churn_rate": 0.7196,
+      "avg_revenue": 5.46
+    },
+    "1": {
+      "size": 318045,
+      "pct_of_users": 21.82,
+      "avg_events": 12.7,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.65,
+      "purchase_rate": 0.0297,
+      "purchase_rate_ci": [
+        0.0291,
+        0.0302
+      ],
+      "churn_rate": 0.566,
+      "avg_revenue": 11.35
+    },
+    "2": {
+      "size": 92745,
+      "pct_of_users": 6.36,
+      "avg_events": 25.5,
+      "avg_spend": 691.83,
+      "avg_active_days": 2.29,
+      "purchase_rate": 0.1648,
+      "purchase_rate_ci": [
+        0.1624,
+        0.1672
+      ],
+      "churn_rate": 0.5196,
+      "avg_revenue": 147.18
+    },
+    "3": {
+      "size": 46377,
+      "pct_of_users": 3.18,
+      "avg_events": 16.1,
+      "avg_spend": 350.37,
+      "avg_active_days": 1.9,
+      "purchase_rate": 0.1228,
+      "purchase_rate_ci": [
+        0.1198,
+        0.1258
+      ],
+      "churn_rate": 0.552,
+      "avg_revenue": 70.7
+    },
+    "4": {
+      "size": 357999,
+      "pct_of_users": 24.56,
+      "avg_events": 2.3,
+      "avg_spend": 0.01,
+      "avg_active_days": 1.16,
+      "purchase_rate": 0.0152,
+      "purchase_rate_ci": [
+        0.0148,
+        0.0156
+      ],
+      "churn_rate": 0.6414,
+      "avg_revenue": 7.25
+    },
+    "5": {
+      "size": 114281,
+      "pct_of_users": 7.84,
+      "avg_events": 43.7,
+      "avg_spend": 9.5,
+      "avg_active_days": 3.56,
+      "purchase_rate": 0.069,
+      "purchase_rate_ci": [
+        0.0676,
+        0.0705
+      ],
+      "churn_rate": 0.3529,
+      "avg_revenue": 24.11
+    },
+    "6": {
+      "size": 199579,
+      "pct_of_users": 13.69,
+      "avg_events": 3.1,
+      "avg_spend": 0.06,
+      "avg_active_days": 1.14,
+      "purchase_rate": 0.0134,
+      "purchase_rate_ci": [
+        0.0129,
+        0.0139
+      ],
+      "churn_rate": 0.6772,
+      "avg_revenue": 5.5
+    }
+  },
+  "test_segment_gmm": {
+    "0": {
+      "size": 256987,
+      "pct_of_users": 17.63,
+      "avg_events": 6.8,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.36,
+      "purchase_rate": 0.0163,
+      "purchase_rate_ci": [
+        0.0158,
+        0.0168
+      ],
+      "churn_rate": 0.6122,
+      "avg_revenue": 6.39
+    },
+    "1": {
+      "size": 74980,
+      "pct_of_users": 5.14,
+      "avg_events": 27.9,
+      "avg_spend": 227.09,
+      "avg_active_days": 2.46,
+      "purchase_rate": 0.1104,
+      "purchase_rate_ci": [
+        0.1081,
+        0.1126
+      ],
+      "churn_rate": 0.459,
+      "avg_revenue": 56.37
+    },
+    "2": {
+      "size": 79163,
+      "pct_of_users": 5.43,
+      "avg_events": 25.3,
+      "avg_spend": 0.0,
+      "avg_active_days": 3.35,
+      "purchase_rate": 0.0467,
+      "purchase_rate_ci": [
+        0.0452,
+        0.0481
+      ],
+      "churn_rate": 0.4305,
+      "avg_revenue": 17.52
+    },
+    "3": {
+      "size": 91421,
+      "pct_of_users": 6.27,
+      "avg_events": 16.5,
+      "avg_spend": 0.0,
+      "avg_active_days": 2.56,
+      "purchase_rate": 0.0397,
+      "purchase_rate_ci": [
+        0.0384,
+        0.0409
+      ],
+      "churn_rate": 0.5112,
+      "avg_revenue": 15.51
+    },
+    "4": {
+      "size": 48011,
+      "pct_of_users": 3.29,
+      "avg_events": 43.4,
+      "avg_spend": 848.15,
+      "avg_active_days": 3.54,
+      "purchase_rate": 0.2238,
+      "purchase_rate_ci": [
+        0.2201,
+        0.2276
+      ],
+      "churn_rate": 0.4326,
+      "avg_revenue": 218.99
+    },
+    "5": {
+      "size": 811619,
+      "pct_of_users": 55.68,
+      "avg_events": 4.7,
+      "avg_spend": 0.0,
+      "avg_active_days": 1.09,
+      "purchase_rate": 0.0156,
+      "purchase_rate_ci": [
+        0.0153,
+        0.0159
+      ],
+      "churn_rate": 0.6335,
+      "avg_revenue": 6.29
+    },
+    "6": {
+      "size": 95491,
+      "pct_of_users": 6.55,
+      "avg_events": 11.8,
+      "avg_spend": 248.93,
+      "avg_active_days": 1.42,
+      "purchase_rate": 0.0777,
+      "purchase_rate_ci": [
+        0.076,
+        0.0794
+      ],
+      "churn_rate": 0.6426,
+      "avg_revenue": 47.0
+    }
+  }
+}

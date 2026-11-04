@@ -1,6 +1,7 @@
 """Generate clean, executable EDA notebook notebooks/01_eda.ipynb."""
 
 from pathlib import Path
+
 import nbformat as nbf
 
 
@@ -10,9 +11,9 @@ def build_notebook(out_path: Path):
     cells = [
         nbf.v4.new_markdown_cell("""# 01 - Exploratory Data Analysis & Funnel Diagnostics
 
-**Project**: Customer Segmentation, Next-Best-Action & Banner Ranking Engine  
-**Dataset**: REES46 eCommerce Behavior Data (October 2019, 42M+ events)  
-**Author**: Bhavya Gupta  
+**Project**: Customer Segmentation, Next-Best-Action & Banner Ranking Engine
+**Dataset**: REES46 eCommerce Behavior Data (October 2019, 42M+ events)
+**Author**: Bhavya Gupta
 
 ---
 ### Objective
@@ -91,7 +92,7 @@ if not opps.empty:
 1. Over 80% of users who add items to cart abandon before completing a purchase, highlighting huge potential for cart reminders and price-led nudges.
 2. Conversion velocity is rapid (median time to purchase is within 30 minutes of session start), necessitating low-latency real-time onsite recommendations.
 3. In subsequent notebooks and pipeline stages, we model customer segments and deploy calibrated propensity scoring and category banner re-ranking.
-""")
+"""),
     ]
 
     nb.cells = cells
