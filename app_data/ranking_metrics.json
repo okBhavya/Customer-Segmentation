@@ -1,0 +1,54 @@
+{
+  "lightgbm_ltr": {
+    "ndcg_at_10": 0.2382,
+    "recall_at_10": 0.2576,
+    "hit_rate_at_10": 0.2649,
+    "catalog_coverage": 1.0,
+    "cold_start_ndcg": 0.2136,
+    "warm_users_ndcg": 0.3903,
+    "novel_units_ndcg": 0.7762
+  },
+  "global_popularity": {
+    "ndcg_at_10": 0.2322,
+    "recall_at_10": 0.2582,
+    "hit_rate_at_10": 0.2649,
+    "catalog_coverage": 1.0,
+    "cold_start_ndcg": 0.2094,
+    "warm_users_ndcg": 0.3731,
+    "novel_units_ndcg": 0.7923
+  },
+  "segment_popularity": {
+    "ndcg_at_10": 0.2319,
+    "recall_at_10": 0.258,
+    "hit_rate_at_10": 0.2649,
+    "catalog_coverage": 1.0,
+    "cold_start_ndcg": 0.2093,
+    "warm_users_ndcg": 0.3714,
+    "novel_units_ndcg": 0.7912
+  },
+  "user_most_viewed": {
+    "ndcg_at_10": 0.166,
+    "recall_at_10": 0.2004,
+    "hit_rate_at_10": 0.2346,
+    "catalog_coverage": 1.0,
+    "cold_start_ndcg": 0.1479,
+    "warm_users_ndcg": 0.2774,
+    "novel_units_ndcg": 0.1527
+  },
+  "lgbm_vs_popularity_uplift_ci": [
+    0.0204,
+    0.0318
+  ],
+  "ips_ctr_proxy": {
+    "naive_ctr": 0.07171,
+    "snips_ctr_estimate": 0.04796,
+    "snips_ctr_ci": [
+      0.04651,
+      0.04957
+    ],
+    "weight_clipping_min": 0.05,
+    "note": "Propensities estimated from observational category traffic frequency. Self-Normalized Inverse Propensity Scoring (SNIPS) adjusts for exposure/popularity bias."
+  },
+  "n_units": 239,
+  "model_framing": "No banner impression logs exist in this eCommerce dataset. Category banners are modelled as category promotional units. The ranking task predicts next-7-day category engagement (purchase=3, cart=2, view=1). Evaluation is conducted on a held-out test user sample using NDCG@10, Recall@10, and self-normalized IPS."
+}

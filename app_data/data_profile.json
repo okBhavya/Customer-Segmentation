@@ -1,0 +1,45 @@
+{
+  "total_raw_events": 42448764,
+  "total_clean_events": 42349874,
+  "duplicates_removed": 30220,
+  "price_invalid_removed": 68673,
+  "unique_users": 3021435,
+  "unique_products": 165647,
+  "date_range": {
+    "min": "2019-10-01 00:00:00",
+    "max": "2019-10-31 23:59:59"
+  },
+  "event_type_counts_raw": {
+    "view": 40779399,
+    "cart": 926516,
+    "purchase": 742849
+  },
+  "event_type_counts": {
+    "view": 40708807,
+    "cart": 898294,
+    "purchase": 742773
+  },
+  "null_rates_raw": {
+    "event_time": 0.0,
+    "event_type": 0.0,
+    "product_id": 0.0,
+    "category_id": 0.0,
+    "category_code": 0.318398,
+    "brand": 0.144009,
+    "price": 0.0,
+    "user_id": 0.0,
+    "user_session": 0.0
+  },
+  "null_rates_clean": {
+    "event_time": 0.0,
+    "event_type": 0.0,
+    "product_id": 0.0,
+    "category_id": 0.0,
+    "category_code": 0.0,
+    "brand": 0.0,
+    "price": 0.0,
+    "user_id": 0.0,
+    "user_session": 0.0
+  },
+  "ingest_time_seconds": 297.5
+}

@@ -1,0 +1,134 @@
+{
+  "n_users_evaluated": 1457672,
+  "action_distribution": {
+    "win_back_message": 1343405,
+    "no_action": 58965,
+    "cart_reminder": 29164,
+    "category_cross_sell": 22012,
+    "loyalty_early_access": 3118,
+    "price_led_nudge": 1008
+  },
+  "reason_distribution": {
+    "HIGH_CHURN_RISK": 1343405,
+    "DEFAULT_BASELINE": 58965,
+    "OPEN_CART_DETECTED": 29164,
+    "MULTI_CATEGORY_AFFINITY": 22012,
+    "HIGH_VALUE_OR_LOYAL": 3118,
+    "PRICE_SENSITIVE_BEHAVIOR": 1008
+  },
+  "simulations": {
+    "no_action": {
+      "description": "Control group: no interventions sent",
+      "total_cost": 0.0,
+      "total_simulated_ev": 0.0,
+      "avg_ev_per_user": 0.0,
+      "actions_taken": 0
+    },
+    "blanket_price_nudge": {
+      "description": "Send price-led nudge to 100% of audience",
+      "total_cost": 1457672.0,
+      "total_simulated_ev": -956217.18,
+      "avg_ev_per_user": -0.656,
+      "actions_taken": 1457672
+    },
+    "random_allocation": {
+      "description": "Random action chosen among non-control actions",
+      "total_cost": 758235.05,
+      "total_simulated_ev": -256748.25,
+      "avg_ev_per_user": -0.1761,
+      "actions_taken": 1457672
+    },
+    "segment_rules": {
+      "description": "Rule-based routing using segment and cart state",
+      "total_cost": 983577.2,
+      "total_simulated_ev": 2697406.06,
+      "avg_ev_per_user": 1.8505,
+      "actions_taken": 1457672
+    },
+    "model_expected_value": {
+      "description": "Calibrated propensity model with eligibility and cost-benefit EV optimization",
+      "total_cost": 1023263.65,
+      "total_simulated_ev": 3007672.07,
+      "avg_ev_per_user": 2.0633,
+      "actions_taken": 1398707
+    }
+  },
+  "sensitivity_analysis": [
+    {
+      "uplift_multiplier": 0.5,
+      "cost_multiplier": 0.5,
+      "total_simulated_ev": -236994.14
+    },
+    {
+      "uplift_multiplier": 0.5,
+      "cost_multiplier": 1.0,
+      "total_simulated_ev": -748625.96
+    },
+    {
+      "uplift_multiplier": 0.5,
+      "cost_multiplier": 1.5,
+      "total_simulated_ev": -1260257.79
+    },
+    {
+      "uplift_multiplier": 0.75,
+      "cost_multiplier": 0.5,
+      "total_simulated_ev": -99675.3
+    },
+    {
+      "uplift_multiplier": 0.75,
+      "cost_multiplier": 1.0,
+      "total_simulated_ev": -611307.12
+    },
+    {
+      "uplift_multiplier": 0.75,
+      "cost_multiplier": 1.5,
+      "total_simulated_ev": -1122938.95
+    },
+    {
+      "uplift_multiplier": 1.0,
+      "cost_multiplier": 0.5,
+      "total_simulated_ev": 37643.55
+    },
+    {
+      "uplift_multiplier": 1.0,
+      "cost_multiplier": 1.0,
+      "total_simulated_ev": -473988.28
+    },
+    {
+      "uplift_multiplier": 1.0,
+      "cost_multiplier": 1.5,
+      "total_simulated_ev": -985620.1
+    },
+    {
+      "uplift_multiplier": 1.25,
+      "cost_multiplier": 0.5,
+      "total_simulated_ev": 174962.39
+    },
+    {
+      "uplift_multiplier": 1.25,
+      "cost_multiplier": 1.0,
+      "total_simulated_ev": -336669.44
+    },
+    {
+      "uplift_multiplier": 1.25,
+      "cost_multiplier": 1.5,
+      "total_simulated_ev": -848301.26
+    },
+    {
+      "uplift_multiplier": 1.5,
+      "cost_multiplier": 0.5,
+      "total_simulated_ev": 312281.23
+    },
+    {
+      "uplift_multiplier": 1.5,
+      "cost_multiplier": 1.0,
+      "total_simulated_ev": -199350.59
+    },
+    {
+      "uplift_multiplier": 1.5,
+      "cost_multiplier": 1.5,
+      "total_simulated_ev": -710982.42
+    }
+  ],
+  "disclaimer": "IMPORTANT: All figures are simulated offline estimates under stated cost and uplift assumptions. No customer interventions were logged in the raw dataset. These metrics represent expected value model comparisons, not measured A/B test lift."
+}

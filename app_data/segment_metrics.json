@@ -1,0 +1,57 @@
+{
+  "k_selection": {
+    "4": {
+      "silhouette": 0.2418,
+      "davies_bouldin": 1.5938,
+      "bic": -600324.8,
+      "stability_ari_mean": 0.6122,
+      "stability_ari_std": 0.2119
+    },
+    "5": {
+      "silhouette": 0.2756,
+      "davies_bouldin": 1.1625,
+      "bic": -644258.5,
+      "stability_ari_mean": 0.6738,
+      "stability_ari_std": 0.2645
+    },
+    "6": {
+      "silhouette": 0.2827,
+      "davies_bouldin": 1.1516,
+      "bic": -623220.6,
+      "stability_ari_mean": 0.7544,
+      "stability_ari_std": 0.2855
+    },
+    "7": {
+      "silhouette": 0.2875,
+      "davies_bouldin": 1.2444,
+      "bic": -636115.3,
+      "stability_ari_mean": 0.6115,
+      "stability_ari_std": 0.214
+    }
+  },
+  "chosen_k": 7,
+  "migration": {
+    "segment_kmeans_train_to_val": 0.7181,
+    "segment_kmeans_val_to_test": 0.7056,
+    "segment_gmm_train_to_val": 0.4816,
+    "segment_gmm_val_to_test": 0.4939
+  },
+  "train_segment_kmeans_label_purchase_r2": 0.0582,
+  "train_segment_kmeans_label_revenue_r2": 0.0166,
+  "train_segment_gmm_label_purchase_r2": 0.0627,
+  "train_segment_gmm_label_revenue_r2": 0.0212,
+  "train_rfm_segment_label_purchase_r2": 0.0114,
+  "train_rfm_segment_label_revenue_r2": 0.0017,
+  "validation_segment_kmeans_label_purchase_r2": 0.0567,
+  "validation_segment_kmeans_label_revenue_r2": 0.0181,
+  "validation_segment_gmm_label_purchase_r2": 0.0618,
+  "validation_segment_gmm_label_revenue_r2": 0.022,
+  "validation_rfm_segment_label_purchase_r2": 0.011,
+  "validation_rfm_segment_label_revenue_r2": 0.0021,
+  "test_segment_kmeans_label_purchase_r2": 0.0503,
+  "test_segment_kmeans_label_revenue_r2": 0.0172,
+  "test_segment_gmm_label_purchase_r2": 0.0557,
+  "test_segment_gmm_label_revenue_r2": 0.0215,
+  "test_rfm_segment_label_purchase_r2": 0.0091,
+  "test_rfm_segment_label_revenue_r2": 0.0021
+}

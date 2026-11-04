@@ -1,0 +1,876 @@
+{
+  "data_profile": {
+    "total_raw_events": 42448764,
+    "total_clean_events": 42349874,
+    "duplicates_removed": 30220,
+    "price_invalid_removed": 68673,
+    "unique_users": 3021435,
+    "unique_products": 165647,
+    "date_range": {
+      "min": "2019-10-01 00:00:00",
+      "max": "2019-10-31 23:59:59"
+    },
+    "event_type_counts_raw": {
+      "view": 40779399,
+      "cart": 926516,
+      "purchase": 742849
+    },
+    "event_type_counts": {
+      "view": 40708807,
+      "cart": 898294,
+      "purchase": 742773
+    },
+    "null_rates_raw": {
+      "event_time": 0.0,
+      "event_type": 0.0,
+      "product_id": 0.0,
+      "category_id": 0.0,
+      "category_code": 0.318398,
+      "brand": 0.144009,
+      "price": 0.0,
+      "user_id": 0.0,
+      "user_session": 0.0
+    },
+    "null_rates_clean": {
+      "event_time": 0.0,
+      "event_type": 0.0,
+      "product_id": 0.0,
+      "category_id": 0.0,
+      "category_code": 0.0,
+      "brand": 0.0,
+      "price": 0.0,
+      "user_id": 0.0,
+      "user_session": 0.0
+    },
+    "ingest_time_seconds": 297.5
+  },
+  "segment_metrics": {
+    "k_selection": {
+      "4": {
+        "silhouette": 0.2418,
+        "davies_bouldin": 1.5938,
+        "bic": -600324.8,
+        "stability_ari_mean": 0.6122,
+        "stability_ari_std": 0.2119
+      },
+      "5": {
+        "silhouette": 0.2756,
+        "davies_bouldin": 1.1625,
+        "bic": -644258.5,
+        "stability_ari_mean": 0.6738,
+        "stability_ari_std": 0.2645
+      },
+      "6": {
+        "silhouette": 0.2827,
+        "davies_bouldin": 1.1516,
+        "bic": -623220.6,
+        "stability_ari_mean": 0.7544,
+        "stability_ari_std": 0.2855
+      },
+      "7": {
+        "silhouette": 0.2875,
+        "davies_bouldin": 1.2444,
+        "bic": -636115.3,
+        "stability_ari_mean": 0.6115,
+        "stability_ari_std": 0.214
+      }
+    },
+    "chosen_k": 7,
+    "migration": {
+      "segment_kmeans_train_to_val": 0.7181,
+      "segment_kmeans_val_to_test": 0.7056,
+      "segment_gmm_train_to_val": 0.4816,
+      "segment_gmm_val_to_test": 0.4939
+    },
+    "train_segment_kmeans_label_purchase_r2": 0.0582,
+    "train_segment_kmeans_label_revenue_r2": 0.0166,
+    "train_segment_gmm_label_purchase_r2": 0.0627,
+    "train_segment_gmm_label_revenue_r2": 0.0212,
+    "train_rfm_segment_label_purchase_r2": 0.0114,
+    "train_rfm_segment_label_revenue_r2": 0.0017,
+    "validation_segment_kmeans_label_purchase_r2": 0.0567,
+    "validation_segment_kmeans_label_revenue_r2": 0.0181,
+    "validation_segment_gmm_label_purchase_r2": 0.0618,
+    "validation_segment_gmm_label_revenue_r2": 0.022,
+    "validation_rfm_segment_label_purchase_r2": 0.011,
+    "validation_rfm_segment_label_revenue_r2": 0.0021,
+    "test_segment_kmeans_label_purchase_r2": 0.0503,
+    "test_segment_kmeans_label_revenue_r2": 0.0172,
+    "test_segment_gmm_label_purchase_r2": 0.0557,
+    "test_segment_gmm_label_revenue_r2": 0.0215,
+    "test_rfm_segment_label_purchase_r2": 0.0091,
+    "test_rfm_segment_label_revenue_r2": 0.0021
+  },
+  "propensity_metrics": {
+    "purchase": {
+      "rfm_heuristic": {
+        "roc_auc": 0.6787,
+        "pr_auc": 0.1092,
+        "log_loss": 0.1969,
+        "brier": 0.0429,
+        "roc_auc_ci": [
+          0.6558,
+          0.698
+        ]
+      },
+      "logistic_regression": {
+        "roc_auc": 0.7806,
+        "pr_auc": 0.2096,
+        "log_loss": 0.5653,
+        "brier": 0.185,
+        "roc_auc_ci": [
+          0.7627,
+          0.7983
+        ]
+      },
+      "lightgbm_raw": {
+        "roc_auc": 0.7785,
+        "pr_auc": 0.1586,
+        "log_loss": 0.1673,
+        "brier": 0.0356
+      },
+      "lightgbm_calibrated": {
+        "roc_auc": 0.7783,
+        "pr_auc": 0.1569,
+        "log_loss": 0.1292,
+        "brier": 0.0309,
+        "roc_auc_ci": [
+          0.76,
+          0.7956
+        ]
+      },
+      "diff_lgbm_vs_rfm_auc_ci": [
+        0.0862,
+        0.1152
+      ],
+      "diff_lgbm_vs_lr_auc_ci": [
+        -0.0076,
+        0.0036
+      ],
+      "decile_table": [
+        {
+          "decile": 7,
+          "count": 140023,
+          "positives": 22784,
+          "mean_pred": 0.1718844302010646,
+          "precision": 0.1627,
+          "lift": 4.68,
+          "cum_positives": 22784,
+          "cum_recall": 0.4501
+        },
+        {
+          "decile": 6,
+          "count": 110128,
+          "positives": 6616,
+          "mean_pred": 0.06822324583829464,
+          "precision": 0.0601,
+          "lift": 1.73,
+          "cum_positives": 29400,
+          "cum_recall": 0.5808
+        },
+        {
+          "decile": 5,
+          "count": 133107,
+          "positives": 5115,
+          "mean_pred": 0.043642783292627364,
+          "precision": 0.0384,
+          "lift": 1.11,
+          "cum_positives": 34515,
+          "cum_recall": 0.6818
+        },
+        {
+          "decile": 4,
+          "count": 73569,
+          "positives": 2141,
+          "mean_pred": 0.033575256960316505,
+          "precision": 0.0291,
+          "lift": 0.84,
+          "cum_positives": 36656,
+          "cum_recall": 0.7241
+        },
+        {
+          "decile": 3,
+          "count": 269765,
+          "positives": 5552,
+          "mean_pred": 0.022946233911142398,
+          "precision": 0.0206,
+          "lift": 0.59,
+          "cum_positives": 42208,
+          "cum_recall": 0.8338
+        },
+        {
+          "decile": 2,
+          "count": 283804,
+          "positives": 4171,
+          "mean_pred": 0.016557737376089895,
+          "precision": 0.0147,
+          "lift": 0.42,
+          "cum_positives": 46379,
+          "cum_recall": 0.9162
+        },
+        {
+          "decile": 1,
+          "count": 85385,
+          "positives": 924,
+          "mean_pred": 0.016053844542216634,
+          "precision": 0.0108,
+          "lift": 0.31,
+          "cum_positives": 47303,
+          "cum_recall": 0.9344
+        },
+        {
+          "decile": 0,
+          "count": 361891,
+          "positives": 3319,
+          "mean_pred": 0.011127351789354657,
+          "precision": 0.0092,
+          "lift": 0.26,
+          "cum_positives": 50622,
+          "cum_recall": 1.0
+        }
+      ],
+      "precision_top_10pct": 0.1588,
+      "top_features": [
+        {
+          "feature": "days_since_last_event",
+          "importance": 7
+        },
+        {
+          "feature": "avg_session_length_minutes",
+          "importance": 5
+        },
+        {
+          "feature": "view_to_cart_rate",
+          "importance": 3
+        },
+        {
+          "feature": "active_days",
+          "importance": 1
+        },
+        {
+          "feature": "avg_session_gap_hours",
+          "importance": 1
+        },
+        {
+          "feature": "total_events",
+          "importance": 1
+        },
+        {
+          "feature": "purchase_count",
+          "importance": 1
+        },
+        {
+          "feature": "days_since_last_purchase",
+          "importance": 1
+        },
+        {
+          "feature": "last_3d_events",
+          "importance": 1
+        },
+        {
+          "feature": "events_per_active_day",
+          "importance": 1
+        },
+        {
+          "feature": "events_per_session",
+          "importance": 1
+        },
+        {
+          "feature": "cart_churn_rate",
+          "importance": 1
+        },
+        {
+          "feature": "cart_count",
+          "importance": 0
+        },
+        {
+          "feature": "view_count",
+          "importance": 0
+        },
+        {
+          "feature": "total_sessions",
+          "importance": 0
+        },
+        {
+          "feature": "remove_count",
+          "importance": 0
+        },
+        {
+          "feature": "total_spend",
+          "importance": 0
+        },
+        {
+          "feature": "has_open_cart",
+          "importance": 0
+        },
+        {
+          "feature": "cart_abandonment_rate",
+          "importance": 0
+        },
+        {
+          "feature": "cart_to_purchase_rate",
+          "importance": 0
+        }
+      ],
+      "feature_group_ablation": {
+        "full_model": 0.7724,
+        "without_recency_frequency": 0.7669,
+        "drop_recency_frequency_delta": 0.0055,
+        "without_funnel_conversion": 0.7683,
+        "drop_funnel_conversion_delta": 0.004,
+        "without_monetary": 0.7714,
+        "drop_monetary_delta": 0.001,
+        "without_breadth_temporal": 0.7707,
+        "drop_breadth_temporal_delta": 0.0017
+      }
+    },
+    "churn": {
+      "rfm_heuristic": {
+        "roc_auc": 0.5189,
+        "pr_auc": 0.5473,
+        "log_loss": 1.4421,
+        "brier": 0.4431,
+        "roc_auc_ci": [
+          0.5116,
+          0.5277
+        ]
+      },
+      "logistic_regression": {
+        "roc_auc": 0.6748,
+        "pr_auc": 0.6698,
+        "log_loss": 0.6408,
+        "brier": 0.2252,
+        "roc_auc_ci": [
+          0.6696,
+          0.6817
+        ]
+      },
+      "lightgbm_raw": {
+        "roc_auc": 0.6824,
+        "pr_auc": 0.6822,
+        "log_loss": 0.6358,
+        "brier": 0.2231
+      },
+      "lightgbm_calibrated": {
+        "roc_auc": 0.6823,
+        "pr_auc": 0.6794,
+        "log_loss": 0.6348,
+        "brier": 0.2226,
+        "roc_auc_ci": [
+          0.6769,
+          0.6889
+        ]
+      },
+      "diff_lgbm_vs_rfm_auc_ci": [
+        0.153,
+        0.1716
+      ],
+      "diff_lgbm_vs_lr_auc_ci": [
+        0.0055,
+        0.0102
+      ],
+      "decile_table": [
+        {
+          "decile": 9,
+          "count": 39875,
+          "positives": 30501,
+          "mean_pred": 0.7499251315648227,
+          "precision": 0.7649,
+          "lift": 1.45,
+          "cum_positives": 30501,
+          "cum_recall": 0.1323
+        },
+        {
+          "decile": 8,
+          "count": 47188,
+          "positives": 32454,
+          "mean_pred": 0.6648055606260801,
+          "precision": 0.6878,
+          "lift": 1.3,
+          "cum_positives": 62955,
+          "cum_recall": 0.2731
+        },
+        {
+          "decile": 7,
+          "count": 39865,
+          "positives": 25750,
+          "mean_pred": 0.624265345817273,
+          "precision": 0.6459,
+          "lift": 1.22,
+          "cum_positives": 88705,
+          "cum_recall": 0.3848
+        },
+        {
+          "decile": 6,
+          "count": 47232,
+          "positives": 28917,
+          "mean_pred": 0.5961642598958153,
+          "precision": 0.6122,
+          "lift": 1.16,
+          "cum_positives": 117622,
+          "cum_recall": 0.5102
+        },
+        {
+          "decile": 5,
+          "count": 42871,
+          "positives": 24832,
+          "mean_pred": 0.5590832458578759,
+          "precision": 0.5792,
+          "lift": 1.1,
+          "cum_positives": 142454,
+          "cum_recall": 0.6179
+        },
+        {
+          "decile": 4,
+          "count": 42755,
+          "positives": 23247,
+          "mean_pred": 0.5213467722605788,
+          "precision": 0.5437,
+          "lift": 1.03,
+          "cum_positives": 165701,
+          "cum_recall": 0.7188
+        },
+        {
+          "decile": 3,
+          "count": 40904,
+          "positives": 20293,
+          "mean_pred": 0.4769564870152497,
+          "precision": 0.4961,
+          "lift": 0.94,
+          "cum_positives": 185994,
+          "cum_recall": 0.8068
+        },
+        {
+          "decile": 2,
+          "count": 45157,
+          "positives": 19922,
+          "mean_pred": 0.4237518124853182,
+          "precision": 0.4412,
+          "lift": 0.83,
+          "cum_positives": 205916,
+          "cum_recall": 0.8932
+        },
+        {
+          "decile": 1,
+          "count": 44463,
+          "positives": 15748,
+          "mean_pred": 0.34168169991691105,
+          "precision": 0.3542,
+          "lift": 0.67,
+          "cum_positives": 221664,
+          "cum_recall": 0.9615
+        },
+        {
+          "decile": 0,
+          "count": 45962,
+          "positives": 8873,
+          "mean_pred": 0.18477228753304112,
+          "precision": 0.1931,
+          "lift": 0.37,
+          "cum_positives": 230537,
+          "cum_recall": 1.0
+        }
+      ],
+      "precision_top_10pct": 0.7592,
+      "top_features": [
+        {
+          "feature": "avg_session_length_minutes",
+          "importance": 1390
+        },
+        {
+          "feature": "days_since_last_event",
+          "importance": 1310
+        },
+        {
+          "feature": "price_relative_to_category_median",
+          "importance": 1081
+        },
+        {
+          "feature": "avg_session_gap_hours",
+          "importance": 1001
+        },
+        {
+          "feature": "price_std",
+          "importance": 664
+        },
+        {
+          "feature": "active_days",
+          "importance": 596
+        },
+        {
+          "feature": "price_median",
+          "importance": 588
+        },
+        {
+          "feature": "events_per_session",
+          "importance": 572
+        },
+        {
+          "feature": "pct_events_peak_hour",
+          "importance": 570
+        },
+        {
+          "feature": "last_3d_events",
+          "importance": 521
+        },
+        {
+          "feature": "top_category_share",
+          "importance": 512
+        },
+        {
+          "feature": "events_per_brand",
+          "importance": 480
+        },
+        {
+          "feature": "top_brand_share",
+          "importance": 418
+        },
+        {
+          "feature": "total_sessions",
+          "importance": 410
+        },
+        {
+          "feature": "total_events",
+          "importance": 387
+        },
+        {
+          "feature": "price_mean",
+          "importance": 384
+        },
+        {
+          "feature": "avg_order_value",
+          "importance": 355
+        },
+        {
+          "feature": "events_per_category",
+          "importance": 330
+        },
+        {
+          "feature": "total_spend",
+          "importance": 315
+        },
+        {
+          "feature": "recency_trend_ratio",
+          "importance": 313
+        }
+      ],
+      "feature_group_ablation": {
+        "full_model": 0.6814,
+        "without_recency_frequency": 0.6686,
+        "drop_recency_frequency_delta": 0.0128,
+        "without_funnel_conversion": 0.6782,
+        "drop_funnel_conversion_delta": 0.0032,
+        "without_monetary": 0.6771,
+        "drop_monetary_delta": 0.0043,
+        "without_breadth_temporal": 0.676,
+        "drop_breadth_temporal_delta": 0.0054
+      }
+    }
+  },
+  "nba_report": {
+    "n_users_evaluated": 1457672,
+    "action_distribution": {
+      "win_back_message": 1343405,
+      "no_action": 58965,
+      "cart_reminder": 29164,
+      "category_cross_sell": 22012,
+      "loyalty_early_access": 3118,
+      "price_led_nudge": 1008
+    },
+    "reason_distribution": {
+      "HIGH_CHURN_RISK": 1343405,
+      "DEFAULT_BASELINE": 58965,
+      "OPEN_CART_DETECTED": 29164,
+      "MULTI_CATEGORY_AFFINITY": 22012,
+      "HIGH_VALUE_OR_LOYAL": 3118,
+      "PRICE_SENSITIVE_BEHAVIOR": 1008
+    },
+    "simulations": {
+      "no_action": {
+        "description": "Control group: no interventions sent",
+        "total_cost": 0.0,
+        "total_simulated_ev": 0.0,
+        "avg_ev_per_user": 0.0,
+        "actions_taken": 0
+      },
+      "blanket_price_nudge": {
+        "description": "Send price-led nudge to 100% of audience",
+        "total_cost": 1457672.0,
+        "total_simulated_ev": -956217.18,
+        "avg_ev_per_user": -0.656,
+        "actions_taken": 1457672
+      },
+      "random_allocation": {
+        "description": "Random action chosen among non-control actions",
+        "total_cost": 758235.05,
+        "total_simulated_ev": -256748.25,
+        "avg_ev_per_user": -0.1761,
+        "actions_taken": 1457672
+      },
+      "segment_rules": {
+        "description": "Rule-based routing using segment and cart state",
+        "total_cost": 983577.2,
+        "total_simulated_ev": 2697406.06,
+        "avg_ev_per_user": 1.8505,
+        "actions_taken": 1457672
+      },
+      "model_expected_value": {
+        "description": "Calibrated propensity model with eligibility and cost-benefit EV optimization",
+        "total_cost": 1023263.65,
+        "total_simulated_ev": 3007672.07,
+        "avg_ev_per_user": 2.0633,
+        "actions_taken": 1398707
+      }
+    },
+    "sensitivity_analysis": [
+      {
+        "uplift_multiplier": 0.5,
+        "cost_multiplier": 0.5,
+        "total_simulated_ev": -236994.14
+      },
+      {
+        "uplift_multiplier": 0.5,
+        "cost_multiplier": 1.0,
+        "total_simulated_ev": -748625.96
+      },
+      {
+        "uplift_multiplier": 0.5,
+        "cost_multiplier": 1.5,
+        "total_simulated_ev": -1260257.79
+      },
+      {
+        "uplift_multiplier": 0.75,
+        "cost_multiplier": 0.5,
+        "total_simulated_ev": -99675.3
+      },
+      {
+        "uplift_multiplier": 0.75,
+        "cost_multiplier": 1.0,
+        "total_simulated_ev": -611307.12
+      },
+      {
+        "uplift_multiplier": 0.75,
+        "cost_multiplier": 1.5,
+        "total_simulated_ev": -1122938.95
+      },
+      {
+        "uplift_multiplier": 1.0,
+        "cost_multiplier": 0.5,
+        "total_simulated_ev": 37643.55
+      },
+      {
+        "uplift_multiplier": 1.0,
+        "cost_multiplier": 1.0,
+        "total_simulated_ev": -473988.28
+      },
+      {
+        "uplift_multiplier": 1.0,
+        "cost_multiplier": 1.5,
+        "total_simulated_ev": -985620.1
+      },
+      {
+        "uplift_multiplier": 1.25,
+        "cost_multiplier": 0.5,
+        "total_simulated_ev": 174962.39
+      },
+      {
+        "uplift_multiplier": 1.25,
+        "cost_multiplier": 1.0,
+        "total_simulated_ev": -336669.44
+      },
+      {
+        "uplift_multiplier": 1.25,
+        "cost_multiplier": 1.5,
+        "total_simulated_ev": -848301.26
+      },
+      {
+        "uplift_multiplier": 1.5,
+        "cost_multiplier": 0.5,
+        "total_simulated_ev": 312281.23
+      },
+      {
+        "uplift_multiplier": 1.5,
+        "cost_multiplier": 1.0,
+        "total_simulated_ev": -199350.59
+      },
+      {
+        "uplift_multiplier": 1.5,
+        "cost_multiplier": 1.5,
+        "total_simulated_ev": -710982.42
+      }
+    ],
+    "disclaimer": "IMPORTANT: All figures are simulated offline estimates under stated cost and uplift assumptions. No customer interventions were logged in the raw dataset. These metrics represent expected value model comparisons, not measured A/B test lift."
+  },
+  "ranking_metrics": {
+    "lightgbm_ltr": {
+      "ndcg_at_10": 0.2382,
+      "recall_at_10": 0.2576,
+      "hit_rate_at_10": 0.2649,
+      "catalog_coverage": 1.0,
+      "cold_start_ndcg": 0.2136,
+      "warm_users_ndcg": 0.3903,
+      "novel_units_ndcg": 0.7762
+    },
+    "global_popularity": {
+      "ndcg_at_10": 0.2322,
+      "recall_at_10": 0.2582,
+      "hit_rate_at_10": 0.2649,
+      "catalog_coverage": 1.0,
+      "cold_start_ndcg": 0.2094,
+      "warm_users_ndcg": 0.3731,
+      "novel_units_ndcg": 0.7923
+    },
+    "segment_popularity": {
+      "ndcg_at_10": 0.2319,
+      "recall_at_10": 0.258,
+      "hit_rate_at_10": 0.2649,
+      "catalog_coverage": 1.0,
+      "cold_start_ndcg": 0.2093,
+      "warm_users_ndcg": 0.3714,
+      "novel_units_ndcg": 0.7912
+    },
+    "user_most_viewed": {
+      "ndcg_at_10": 0.166,
+      "recall_at_10": 0.2004,
+      "hit_rate_at_10": 0.2346,
+      "catalog_coverage": 1.0,
+      "cold_start_ndcg": 0.1479,
+      "warm_users_ndcg": 0.2774,
+      "novel_units_ndcg": 0.1527
+    },
+    "lgbm_vs_popularity_uplift_ci": [
+      0.0204,
+      0.0318
+    ],
+    "ips_ctr_proxy": {
+      "naive_ctr": 0.07171,
+      "snips_ctr_estimate": 0.04796,
+      "snips_ctr_ci": [
+        0.04651,
+        0.04957
+      ],
+      "weight_clipping_min": 0.05,
+      "note": "Propensities estimated from observational category traffic frequency. Self-Normalized Inverse Propensity Scoring (SNIPS) adjusts for exposure/popularity bias."
+    },
+    "n_units": 239,
+    "model_framing": "No banner impression logs exist in this eCommerce dataset. Category banners are modelled as category promotional units. The ranking task predicts next-7-day category engagement (purchase=3, cart=2, view=1). Evaluation is conducted on a held-out test user sample using NDCG@10, Recall@10, and self-normalized IPS."
+  },
+  "experiment_report": {
+    "baseline_metrics": {
+      "purchase_conversion_rate": 0.0347,
+      "revenue_per_user_mean": 19.75,
+      "revenue_per_user_std": 269.03,
+      "revenue_per_user_var": 72375.77
+    },
+    "sample_size_table": [
+      {
+        "relative_mde": 0.01,
+        "absolute_mde": 0.00035,
+        "target_purchase_rate": 0.03508,
+        "sample_size_per_arm": 4384219,
+        "total_sample_size": 8768438
+      },
+      {
+        "relative_mde": 0.02,
+        "absolute_mde": 0.00069,
+        "target_purchase_rate": 0.03542,
+        "sample_size_per_arm": 1101290,
+        "total_sample_size": 2202580
+      },
+      {
+        "relative_mde": 0.03,
+        "absolute_mde": 0.00104,
+        "target_purchase_rate": 0.03577,
+        "sample_size_per_arm": 491783,
+        "total_sample_size": 983566
+      },
+      {
+        "relative_mde": 0.04,
+        "absolute_mde": 0.00139,
+        "target_purchase_rate": 0.03612,
+        "sample_size_per_arm": 277929,
+        "total_sample_size": 555858
+      },
+      {
+        "relative_mde": 0.05,
+        "absolute_mde": 0.00174,
+        "target_purchase_rate": 0.03646,
+        "sample_size_per_arm": 178706,
+        "total_sample_size": 357412
+      },
+      {
+        "relative_mde": 0.1,
+        "absolute_mde": 0.00347,
+        "target_purchase_rate": 0.0382,
+        "sample_size_per_arm": 45707,
+        "total_sample_size": 91414
+      }
+    ],
+    "cuped": {
+      "pre_metric": "total_spend_lookback",
+      "post_metric": "label_revenue_horizon",
+      "correlation": 0.4136,
+      "variance_original": 72375.72,
+      "variance_cuped": 59994.76,
+      "variance_reduction_pct": 17.11,
+      "effective_sample_size_multiplier": 1.21
+    },
+    "srm_validation": {
+      "test_pass": {
+        "observed": [
+          10000,
+          10050
+        ],
+        "chi2": 0.125,
+        "p_value": 0.724
+      },
+      "test_fail": {
+        "observed": [
+          10000,
+          10600
+        ],
+        "chi2": 17.476,
+        "p_value": 2.9e-05
+      }
+    },
+    "simulation_validation": {
+      "n_simulations": 1000,
+      "target_alpha": 0.05,
+      "empirical_type_1_error": 0.058,
+      "target_power": 0.8,
+      "empirical_power_5pct_lift": 0.803
+    },
+    "multiple_testing_correction": [
+      {
+        "segment": "Champions",
+        "raw_p_value": 0.008,
+        "holm_adjusted_p": 0.04,
+        "significant_at_05": true
+      },
+      {
+        "segment": "Loyal",
+        "raw_p_value": 0.021,
+        "holm_adjusted_p": 0.084,
+        "significant_at_05": false
+      },
+      {
+        "segment": "At-Risk",
+        "raw_p_value": 0.045,
+        "holm_adjusted_p": 0.135,
+        "significant_at_05": false
+      },
+      {
+        "segment": "Window Shoppers",
+        "raw_p_value": 0.12,
+        "holm_adjusted_p": 0.24,
+        "significant_at_05": false
+      },
+      {
+        "segment": "Hibernating",
+        "raw_p_value": 0.35,
+        "holm_adjusted_p": 0.35,
+        "significant_at_05": false
+      }
+    ]
+  }
+}

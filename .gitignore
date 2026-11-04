@@ -1,6 +1,7 @@
 # Data (never committed)
 data/
 *.parquet
+!app_data/*.parquet
 
 # Python
 .venv/
