@@ -1,0 +1,684 @@
+{
+  "overall_funnel": {
+    "viewers": 3021273,
+    "carters": 337082,
+    "purchasers": 347118,
+    "view_events": 40708807,
+    "cart_events": 898294,
+    "purchase_events": 742773,
+    "view_to_cart_rate": 0.1116,
+    "cart_to_purchase_rate": 1.0298,
+    "overall_conversion": 0.1149
+  },
+  "hourly_funnel": [
+    {
+      "hour": 0,
+      "viewers": 59556,
+      "carters": 2464,
+      "purchasers": 2197,
+      "view_to_cart": 0.0414,
+      "cart_to_purchase": 0.8916
+    },
+    {
+      "hour": 1,
+      "viewers": 116326,
+      "carters": 4726,
+      "purchasers": 4346,
+      "view_to_cart": 0.0406,
+      "cart_to_purchase": 0.9196
+    },
+    {
+      "hour": 2,
+      "viewers": 209009,
+      "carters": 10760,
+      "purchasers": 10878,
+      "view_to_cart": 0.0515,
+      "cart_to_purchase": 1.011
+    },
+    {
+      "hour": 3,
+      "viewers": 290647,
+      "carters": 19829,
+      "purchasers": 22056,
+      "view_to_cart": 0.0682,
+      "cart_to_purchase": 1.1123
+    },
+    {
+      "hour": 4,
+      "viewers": 351875,
+      "carters": 26757,
+      "purchasers": 30638,
+      "view_to_cart": 0.076,
+      "cart_to_purchase": 1.145
+    },
+    {
+      "hour": 5,
+      "viewers": 386979,
+      "carters": 31267,
+      "purchasers": 35740,
+      "view_to_cart": 0.0808,
+      "cart_to_purchase": 1.1431
+    },
+    {
+      "hour": 6,
+      "viewers": 412827,
+      "carters": 34402,
+      "purchasers": 38451,
+      "view_to_cart": 0.0833,
+      "cart_to_purchase": 1.1177
+    },
+    {
+      "hour": 7,
+      "viewers": 426482,
+      "carters": 35201,
+      "purchasers": 39581,
+      "view_to_cart": 0.0825,
+      "cart_to_purchase": 1.1244
+    },
+    {
+      "hour": 8,
+      "viewers": 431975,
+      "carters": 36258,
+      "purchasers": 40689,
+      "view_to_cart": 0.0839,
+      "cart_to_purchase": 1.1222
+    },
+    {
+      "hour": 9,
+      "viewers": 421580,
+      "carters": 36085,
+      "purchasers": 40172,
+      "view_to_cart": 0.0856,
+      "cart_to_purchase": 1.1133
+    },
+    {
+      "hour": 10,
+      "viewers": 413238,
+      "carters": 34816,
+      "purchasers": 38244,
+      "view_to_cart": 0.0843,
+      "cart_to_purchase": 1.0985
+    },
+    {
+      "hour": 11,
+      "viewers": 398506,
+      "carters": 32600,
+      "purchasers": 35383,
+      "view_to_cart": 0.0818,
+      "cart_to_purchase": 1.0854
+    },
+    {
+      "hour": 12,
+      "viewers": 393314,
+      "carters": 30045,
+      "purchasers": 31663,
+      "view_to_cart": 0.0764,
+      "cart_to_purchase": 1.0539
+    },
+    {
+      "hour": 13,
+      "viewers": 419085,
+      "carters": 29119,
+      "purchasers": 29924,
+      "view_to_cart": 0.0695,
+      "cart_to_purchase": 1.0276
+    },
+    {
+      "hour": 14,
+      "viewers": 442808,
+      "carters": 27987,
+      "purchasers": 28633,
+      "view_to_cart": 0.0632,
+      "cart_to_purchase": 1.0231
+    },
+    {
+      "hour": 15,
+      "viewers": 459022,
+      "carters": 28051,
+      "purchasers": 28605,
+      "view_to_cart": 0.0611,
+      "cart_to_purchase": 1.0197
+    },
+    {
+      "hour": 16,
+      "viewers": 445652,
+      "carters": 26474,
+      "purchasers": 26830,
+      "view_to_cart": 0.0594,
+      "cart_to_purchase": 1.0134
+    },
+    {
+      "hour": 17,
+      "viewers": 384232,
+      "carters": 22478,
+      "purchasers": 22858,
+      "view_to_cart": 0.0585,
+      "cart_to_purchase": 1.0169
+    },
+    {
+      "hour": 18,
+      "viewers": 311497,
+      "carters": 17653,
+      "purchasers": 17230,
+      "view_to_cart": 0.0567,
+      "cart_to_purchase": 0.976
+    },
+    {
+      "hour": 19,
+      "viewers": 191288,
+      "carters": 11793,
+      "purchasers": 11583,
+      "view_to_cart": 0.0617,
+      "cart_to_purchase": 0.9822
+    },
+    {
+      "hour": 20,
+      "viewers": 107659,
+      "carters": 6824,
+      "purchasers": 6791,
+      "view_to_cart": 0.0634,
+      "cart_to_purchase": 0.9952
+    },
+    {
+      "hour": 21,
+      "viewers": 64510,
+      "carters": 4192,
+      "purchasers": 4226,
+      "view_to_cart": 0.065,
+      "cart_to_purchase": 1.0081
+    },
+    {
+      "hour": 22,
+      "viewers": 41236,
+      "carters": 2625,
+      "purchasers": 2634,
+      "view_to_cart": 0.0637,
+      "cart_to_purchase": 1.0034
+    },
+    {
+      "hour": 23,
+      "viewers": 37066,
+      "carters": 1945,
+      "purchasers": 1969,
+      "view_to_cart": 0.0525,
+      "cart_to_purchase": 1.0123
+    }
+  ],
+  "weekday_funnel": [
+    {
+      "weekday": 0,
+      "viewers": 737167,
+      "carters": 63829,
+      "purchasers": 67556,
+      "view_to_cart": 0.0866
+    },
+    {
+      "weekday": 1,
+      "viewers": 707519,
+      "carters": 57718,
+      "purchasers": 63268,
+      "view_to_cart": 0.0816
+    },
+    {
+      "weekday": 2,
+      "viewers": 888555,
+      "carters": 67952,
+      "purchasers": 75047,
+      "view_to_cart": 0.0765
+    },
+    {
+      "weekday": 3,
+      "viewers": 878426,
+      "carters": 66947,
+      "purchasers": 77902,
+      "view_to_cart": 0.0762
+    },
+    {
+      "weekday": 4,
+      "viewers": 836645,
+      "carters": 64411,
+      "purchasers": 74131,
+      "view_to_cart": 0.077
+    },
+    {
+      "weekday": 5,
+      "viewers": 762451,
+      "carters": 68872,
+      "purchasers": 68058,
+      "view_to_cart": 0.0903
+    },
+    {
+      "weekday": 6,
+      "viewers": 712827,
+      "carters": 63575,
+      "purchasers": 64697,
+      "view_to_cart": 0.0892
+    }
+  ],
+  "category_funnel": [
+    {
+      "category_code": "electronics.smartphone",
+      "viewers": 1299947,
+      "carters": 198343,
+      "purchasers": 160437,
+      "views": 10613866,
+      "view_to_cart": 0.1526,
+      "cart_to_purchase": 0.8089
+    },
+    {
+      "category_code": "electronics.clocks",
+      "viewers": 211798,
+      "carters": 9477,
+      "purchasers": 10746,
+      "views": 1269694,
+      "view_to_cart": 0.0447,
+      "cart_to_purchase": 1.1339
+    },
+    {
+      "category_code": "computers.notebook",
+      "viewers": 129180,
+      "carters": 7474,
+      "purchasers": 9185,
+      "views": 1104738,
+      "view_to_cart": 0.0579,
+      "cart_to_purchase": 1.2289
+    },
+    {
+      "category_code": "electronics.video.tv",
+      "viewers": 169995,
+      "carters": 16670,
+      "purchasers": 13476,
+      "views": 1054901,
+      "view_to_cart": 0.0981,
+      "cart_to_purchase": 0.8084
+    },
+    {
+      "category_code": "electronics.audio.headphone",
+      "viewers": 213889,
+      "carters": 22481,
+      "purchasers": 18826,
+      "views": 1017621,
+      "view_to_cart": 0.1051,
+      "cart_to_purchase": 0.8374
+    },
+    {
+      "category_code": "appliances.kitchen.refrigerators",
+      "viewers": 131588,
+      "carters": 6475,
+      "purchasers": 7656,
+      "views": 862917,
+      "view_to_cart": 0.0492,
+      "cart_to_purchase": 1.1824
+    },
+    {
+      "category_code": "appliances.kitchen.washer",
+      "viewers": 132017,
+      "carters": 9945,
+      "purchasers": 10480,
+      "views": 830729,
+      "view_to_cart": 0.0753,
+      "cart_to_purchase": 1.0538
+    },
+    {
+      "category_code": "appliances.environment.vacuum",
+      "viewers": 119903,
+      "carters": 8523,
+      "purchasers": 9191,
+      "views": 771331,
+      "view_to_cart": 0.0711,
+      "cart_to_purchase": 1.0784
+    },
+    {
+      "category_code": "apparel.shoes",
+      "viewers": 126708,
+      "carters": 0,
+      "purchasers": 2757,
+      "views": 757635,
+      "view_to_cart": 0.0,
+      "cart_to_purchase": NaN
+    },
+    {
+      "category_code": "auto.accessories.player",
+      "viewers": 80400,
+      "carters": 758,
+      "purchasers": 3244,
+      "views": 463787,
+      "view_to_cart": 0.0094,
+      "cart_to_purchase": 4.2797
+    },
+    {
+      "category_code": "computers.desktop",
+      "viewers": 71834,
+      "carters": 1805,
+      "purchasers": 2204,
+      "views": 417449,
+      "view_to_cart": 0.0251,
+      "cart_to_purchase": 1.2211
+    },
+    {
+      "category_code": "apparel.shoes.keds",
+      "viewers": 91604,
+      "carters": 0,
+      "purchasers": 1951,
+      "views": 407370,
+      "view_to_cart": 0.0,
+      "cart_to_purchase": NaN
+    },
+    {
+      "category_code": "furniture.bedroom.bed",
+      "viewers": 78884,
+      "carters": 483,
+      "purchasers": 1550,
+      "views": 353965,
+      "view_to_cart": 0.0061,
+      "cart_to_purchase": 3.2091
+    },
+    {
+      "category_code": "electronics.audio.subwoofer",
+      "viewers": 50026,
+      "carters": 214,
+      "purchasers": 2188,
+      "views": 309730,
+      "view_to_cart": 0.0043,
+      "cart_to_purchase": 10.2243
+    },
+    {
+      "category_code": "electronics.tablet",
+      "viewers": 58726,
+      "carters": 4097,
+      "purchasers": 3448,
+      "views": 301822,
+      "view_to_cart": 0.0698,
+      "cart_to_purchase": 0.8416
+    },
+    {
+      "category_code": "furniture.living_room.cabinet",
+      "viewers": 53797,
+      "carters": 0,
+      "purchasers": 1302,
+      "views": 297919,
+      "view_to_cart": 0.0,
+      "cart_to_purchase": NaN
+    },
+    {
+      "category_code": "construction.tools.drill",
+      "viewers": 37781,
+      "carters": 1787,
+      "purchasers": 2018,
+      "views": 273480,
+      "view_to_cart": 0.0473,
+      "cart_to_purchase": 1.1293
+    },
+    {
+      "category_code": "electronics.telephone",
+      "viewers": 47413,
+      "carters": 2716,
+      "purchasers": 2796,
+      "views": 238312,
+      "view_to_cart": 0.0573,
+      "cart_to_purchase": 1.0295
+    },
+    {
+      "category_code": "auto.accessories.videoregister",
+      "viewers": 50477,
+      "carters": 1410,
+      "purchasers": 1826,
+      "views": 218940,
+      "view_to_cart": 0.0279,
+      "cart_to_purchase": 1.295
+    },
+    {
+      "category_code": "kids.carriage",
+      "viewers": 30383,
+      "carters": 520,
+      "purchasers": 1583,
+      "views": 216725,
+      "view_to_cart": 0.0171,
+      "cart_to_purchase": 3.0442
+    },
+    {
+      "category_code": "furniture.living_room.sofa",
+      "viewers": 45493,
+      "carters": 0,
+      "purchasers": 742,
+      "views": 214432,
+      "view_to_cart": 0.0,
+      "cart_to_purchase": NaN
+    },
+    {
+      "category_code": "appliances.kitchen.blender",
+      "viewers": 38694,
+      "carters": 1993,
+      "purchasers": 2488,
+      "views": 194361,
+      "view_to_cart": 0.0515,
+      "cart_to_purchase": 1.2484
+    },
+    {
+      "category_code": "appliances.kitchen.oven",
+      "viewers": 29355,
+      "carters": 943,
+      "purchasers": 1767,
+      "views": 190814,
+      "view_to_cart": 0.0321,
+      "cart_to_purchase": 1.8738
+    },
+    {
+      "category_code": "accessories.bag",
+      "viewers": 44706,
+      "carters": 301,
+      "purchasers": 939,
+      "views": 188221,
+      "view_to_cart": 0.0067,
+      "cart_to_purchase": 3.1196
+    },
+    {
+      "category_code": "auto.accessories.alarm",
+      "viewers": 42402,
+      "carters": 1945,
+      "purchasers": 1764,
+      "views": 187596,
+      "view_to_cart": 0.0459,
+      "cart_to_purchase": 0.9069
+    },
+    {
+      "category_code": "appliances.kitchen.kettle",
+      "viewers": 33670,
+      "carters": 1740,
+      "purchasers": 2408,
+      "views": 178408,
+      "view_to_cart": 0.0517,
+      "cart_to_purchase": 1.3839
+    },
+    {
+      "category_code": "appliances.kitchen.microwave",
+      "viewers": 35916,
+      "carters": 2543,
+      "purchasers": 2949,
+      "views": 164796,
+      "view_to_cart": 0.0708,
+      "cart_to_purchase": 1.1597
+    },
+    {
+      "category_code": "appliances.iron",
+      "viewers": 29611,
+      "carters": 2198,
+      "purchasers": 2948,
+      "views": 157489,
+      "view_to_cart": 0.0742,
+      "cart_to_purchase": 1.3412
+    },
+    {
+      "category_code": "appliances.kitchen.meat_grinder",
+      "viewers": 27732,
+      "carters": 1289,
+      "purchasers": 1904,
+      "views": 155493,
+      "view_to_cart": 0.0465,
+      "cart_to_purchase": 1.4771
+    },
+    {
+      "category_code": "appliances.environment.air_heater",
+      "viewers": 19003,
+      "carters": 1322,
+      "purchasers": 1819,
+      "views": 153177,
+      "view_to_cart": 0.0696,
+      "cart_to_purchase": 1.3759
+    }
+  ],
+  "cart_abandonment": {
+    "total_carters": 337082,
+    "abandoners": 134320,
+    "abandonment_rate": 0.3985
+  },
+  "buyer_sessions": {
+    "single_session_buyers": 235461,
+    "multi_session_buyers": 111657,
+    "multi_session_rate": 0.3217
+  },
+  "time_to_purchase": {
+    "median_minutes": 3.0,
+    "mean_minutes": 7.0,
+    "p25_minutes": 1.4,
+    "p75_minutes": 6.5
+  },
+  "opportunities": [
+    {
+      "category_code": "electronics.smartphone",
+      "views": 10613866,
+      "viewers": 1299947,
+      "carters": 198343,
+      "cart_to_purchase": 0.8089,
+      "conversion_gap": 1.0485,
+      "potential_incremental_orders": 20796.0
+    },
+    {
+      "category_code": "electronics.audio.headphone",
+      "views": 1017621,
+      "viewers": 213889,
+      "carters": 22481,
+      "cart_to_purchase": 0.8374,
+      "conversion_gap": 1.02,
+      "potential_incremental_orders": 2293.0
+    },
+    {
+      "category_code": "electronics.video.tv",
+      "views": 1054901,
+      "viewers": 169995,
+      "carters": 16670,
+      "cart_to_purchase": 0.8084,
+      "conversion_gap": 1.049,
+      "potential_incremental_orders": 1749.0
+    },
+    {
+      "category_code": "appliances.kitchen.washer",
+      "views": 830729,
+      "viewers": 132017,
+      "carters": 9945,
+      "cart_to_purchase": 1.0538,
+      "conversion_gap": 0.8035999999999999,
+      "potential_incremental_orders": 799.0
+    },
+    {
+      "category_code": "electronics.clocks",
+      "views": 1269694,
+      "viewers": 211798,
+      "carters": 9477,
+      "cart_to_purchase": 1.1339,
+      "conversion_gap": 0.7235,
+      "potential_incremental_orders": 686.0
+    },
+    {
+      "category_code": "appliances.environment.vacuum",
+      "views": 771331,
+      "viewers": 119903,
+      "carters": 8523,
+      "cart_to_purchase": 1.0784,
+      "conversion_gap": 0.7789999999999999,
+      "potential_incremental_orders": 664.0
+    },
+    {
+      "category_code": "computers.notebook",
+      "views": 1104738,
+      "viewers": 129180,
+      "carters": 7474,
+      "cart_to_purchase": 1.2289,
+      "conversion_gap": 0.6284999999999998,
+      "potential_incremental_orders": 470.0
+    },
+    {
+      "category_code": "appliances.kitchen.refrigerators",
+      "views": 862917,
+      "viewers": 131588,
+      "carters": 6475,
+      "cart_to_purchase": 1.1824,
+      "conversion_gap": 0.675,
+      "potential_incremental_orders": 437.0
+    },
+    {
+      "category_code": "electronics.tablet",
+      "views": 301822,
+      "viewers": 58726,
+      "carters": 4097,
+      "cart_to_purchase": 0.8416,
+      "conversion_gap": 1.0158,
+      "potential_incremental_orders": 416.0
+    },
+    {
+      "category_code": "electronics.telephone",
+      "views": 238312,
+      "viewers": 47413,
+      "carters": 2716,
+      "cart_to_purchase": 1.0295,
+      "conversion_gap": 0.8278999999999999,
+      "potential_incremental_orders": 225.0
+    },
+    {
+      "category_code": "auto.accessories.alarm",
+      "views": 187596,
+      "viewers": 42402,
+      "carters": 1945,
+      "cart_to_purchase": 0.9069,
+      "conversion_gap": 0.9504999999999999,
+      "potential_incremental_orders": 185.0
+    },
+    {
+      "category_code": "appliances.kitchen.microwave",
+      "views": 164796,
+      "viewers": 35916,
+      "carters": 2543,
+      "cart_to_purchase": 1.1597,
+      "conversion_gap": 0.6977,
+      "potential_incremental_orders": 177.0
+    },
+    {
+      "category_code": "construction.tools.drill",
+      "views": 273480,
+      "viewers": 37781,
+      "carters": 1787,
+      "cart_to_purchase": 1.1293,
+      "conversion_gap": 0.7281,
+      "potential_incremental_orders": 130.0
+    },
+    {
+      "category_code": "appliances.kitchen.blender",
+      "views": 194361,
+      "viewers": 38694,
+      "carters": 1993,
+      "cart_to_purchase": 1.2484,
+      "conversion_gap": 0.609,
+      "potential_incremental_orders": 121.0
+    },
+    {
+      "category_code": "computers.desktop",
+      "views": 417449,
+      "viewers": 71834,
+      "carters": 1805,
+      "cart_to_purchase": 1.2211,
+      "conversion_gap": 0.6362999999999999,
+      "potential_incremental_orders": 115.0
+    }
+  ],
+  "opportunity_assumptions": "Incremental orders estimated assuming 10% of the conversion gap can be closed through targeted interventions. This is an offline estimate, not a measured lift."
+}
